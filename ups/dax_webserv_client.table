@@ -1,0 +1,5 @@
+setupRequired(anaconda)  # FIXME: DM-2727, depend on requests when it's packaged
+setupRequired(sconsUtils)
+
+envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
+
