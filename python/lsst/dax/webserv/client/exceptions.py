@@ -56,6 +56,7 @@ class WebservClientException(WebservException):
     """
     The base exception class for all webserv client exceptions.
     """
+
     def __init__(self, exception, message=None, cause=None, metadata=None, **kwargs):
         self.exception = exception
         self.message = message

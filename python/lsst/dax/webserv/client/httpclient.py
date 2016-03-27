@@ -26,6 +26,7 @@ Low level clients for HTTP interaction.
 import requests
 from urllib import quote as _qt
 
+
 class BaseHttpClient:
     """Request/Response Helper class for all HTTP endpoint clients"""
 

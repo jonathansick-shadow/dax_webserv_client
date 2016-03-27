@@ -45,7 +45,6 @@ class TestMetaserv(unittest.TestCase):
         # patch the doRequest method
         self.client.httpClient.doRequest = wrappedMockDoRequest(self.client.httpClient)
 
-
     def testClient(self):
         expected = 'get http://example.com/meta'
         expected = "/".join((expected, "db"))

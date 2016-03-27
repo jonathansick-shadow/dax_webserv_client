@@ -27,6 +27,7 @@ from .exceptions import checkedError
 from .httpclient import MetaHttpClient
 from requests.exceptions import RequestException
 
+
 class BaseClient:
     """
     Base class for clients.

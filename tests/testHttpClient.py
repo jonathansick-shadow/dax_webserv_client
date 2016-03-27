@@ -28,6 +28,7 @@ import unittest
 
 from lsst.dax.webserv.client import MetaHttpClient
 
+
 def wrappedMockDoRequest(obj):
     def mockDoRequest(httpMethod, endpoint, target, params=None, data=None, **kwargs):
         target = obj._target(endpoint, target)
@@ -59,7 +60,6 @@ class TestMetaserv(unittest.TestCase):
         self.assertEqual(expected, self.httpClient.getTableInfo("DC", "sources", "galaxies").json())
         expected = "/".join((expected, "schema"))
         self.assertEqual(expected, self.httpClient.getTableSchema("DC", "sources", "galaxies").json())
-
 
     def testQuoteRequest(self):
         expected = "get http://example.com/meta/db/DC/source%20catalog"
